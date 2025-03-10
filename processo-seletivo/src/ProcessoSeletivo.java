@@ -7,7 +7,6 @@ public class ProcessoSeletivo {
     public static void main(String[] args) {
         List<String> selecionados = new ArrayList<>();
         selecionados = selecaoCandidatos();
-        
         imprimirSelecionados(selecionados);
     
         for (String candidato : selecionados) {
@@ -66,11 +65,14 @@ public class ProcessoSeletivo {
             double salarioPretendido = salarioAleatorio();
 
             System.out.println(String.format("O candidato %s solicitou um salário de R$ %.2f", candidato, salarioPretendido));
-
+            System.out.println(" ");
 
             if(salarioBase >= salarioPretendido) {
                 System.out.println("O candidado " + candidato + " foi selecionado para vaga ");
+                System.out.println(" ");
+
                 selecionados.add(candidato);
+                
                 candidatosSelecionados++;
             }
 
